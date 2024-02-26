@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Page Remove="Resources\ButtonStyle.xaml" />
-    <Page Remove="Resources\Styles\TabItemStyle.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,7 +34,6 @@
   <ItemGroup>
     <Resource Include="Resources\Styles\ButtonStyle.xaml" />
     <Resource Include="Resources\Fonts\VKSansDisplay-Regular.ttf" />
-    <Resource Include="Resources\Styles\TabItemStyle.xaml" />
   </ItemGroup>
 
 </Project>

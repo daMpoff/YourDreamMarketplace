@@ -14,11 +14,11 @@
             Style="{StaticResource MaterialDesignFilledTabControl}"
             materialDesign:ColorZoneAssist.Background="#313131"
             materialDesign:ColorZoneAssist.Foreground="White">
-        <TabItem Style="{DynamicResource MaterialDesignTabItem}"
-                x:Name="mainTab">
+        <TabItem
+            x:Name="mainTab">
             <TabItem.Header>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Padding="2" Height="20" Text="Главная страница"></TextBlock>
+                    <TextBlock Padding="2" Height="20" Text="Каталог"></TextBlock>
                     <materialDesign:PackIcon Kind="Home" Width="20" Height="20"/>
                 </StackPanel>
             </TabItem.Header>
@@ -30,32 +30,50 @@
                     materialDesign:ColorZoneAssist.Foreground="White"
                     HorizontalContentAlignment="Left"
                     Margin="10,0">
-                    <TabItem Height="60">
+                    <TabItem>
                         <TabItem.Header>
                             <StackPanel Orientation="Horizontal">
-                                <TextBox
-                                    Padding="0"
-                                    Height="30"
+                                <TextBlock
+                                    Height="20"
                                     FontSize="14"
-                                    VerticalContentAlignment="Center"
-                                    Text="Главная страница">
-                                </TextBox>
+                                    Foreground="White"
+                                    Text="ГЛАВНАЯ СТРАНИЦА">
+                                </TextBlock>
                                 <Button
+                                    Click="Button_Click"
                                     Style="{DynamicResource CloseTabButton}"
-                                    Height="30"
-                                    Width="30"
+                                    Height="20"
+                                    Width="20"
                                     Padding="0">
-                                    <materialDesign:PackIcon Kind="CloseBox" Height="30" Width="30"></materialDesign:PackIcon>
+                                    <materialDesign:PackIcon Padding="0" Kind="Close" Height="20" Width="20" HorizontalAlignment="Center"></materialDesign:PackIcon>
                                 </Button>
                             </StackPanel>
                         </TabItem.Header>
                     </TabItem>
-                    <TabItem Header="Второе окно"></TabItem>
+                    <TabItem>
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock
+                                    Height="20"
+                                    FontSize="14"
+                                    Foreground="White"
+                                    Text="Вторая вкладка">        
+                                </TextBlock>
+                                <Button
+                                    Click="Button_Click"
+                                    Style="{DynamicResource CloseTabButton}"
+                                    Height="20"
+                                    Width="20"
+                                    Padding="0">
+                                    <materialDesign:PackIcon Padding="0" Kind="Close" Height="20" Width="20" HorizontalAlignment="Center"></materialDesign:PackIcon>
+                                </Button>
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
                 </TabControl>
             </Grid>
         </TabItem>
         <TabItem
-            Style="{DynamicResource MaterialDesignTabItem}"
             x:Name="cartTab">
             <TabItem.Header>
                 <StackPanel Orientation="Horizontal">
@@ -92,7 +110,8 @@
                 <Grid.RowDefinitions></Grid.RowDefinitions>
             </Grid>
         </TabItem>
-        <TabItem x:Name="settingsTab">
+        <TabItem 
+            x:Name="settingsTab">
             <TabItem.Header>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Padding="2" Height="20" Text="Профиль"></TextBlock>
