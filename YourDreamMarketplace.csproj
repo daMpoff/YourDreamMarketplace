@@ -10,16 +10,14 @@
 
   <ItemGroup>
     <None Remove="Resources\Fonts\VKSansDisplay-Regular.ttf" />
+    <None Remove="Resources\Images\kettle.png" />
+    <None Remove="Resources\Images\speaker.png" />
+    <None Remove="Resources\Images\televisor.png" />
+    <None Remove="Resources\Images\washingMashine.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Remove="Resources\ButtonStyle.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\Images\" />
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\kettle.png" />
+    <Resource Include="Resources\Images\speaker.png" />
+    <Resource Include="Resources\Images\televisor.png" />
+    <Resource Include="Resources\Images\washingMashine.png" />
     <Resource Include="Resources\Styles\ButtonStyle.xaml" />
     <Resource Include="Resources\Fonts\VKSansDisplay-Regular.ttf" />
   </ItemGroup>
