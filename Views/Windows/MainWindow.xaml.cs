@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace YourDreamMarketplace
 {
@@ -14,9 +15,26 @@ namespace YourDreamMarketplace
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button button = (Button)sender;
-            StackPanel stackPanel = (StackPanel)button.Parent;
-            MessageBox.Show(stackPanel.ToString());
+            TabItem tabItem = FindParent<TabItem>((DependencyObject)sender);
+            TabControl tabControl = FindParent<TabControl>(tabItem);
+            tabControl.Items.Remove(tabItem);
+        }
+        // Метод для поиска родительского элемента заданного типа
+        private T FindParent<T>(DependencyObject child) where T : DependencyObject
+        {
+            DependencyObject parentObject = VisualTreeHelper.GetParent(child);
+
+            if (parentObject == null)
+                return null;
+
+            if (parentObject is T parent)
+            {
+                return parent;
+            }
+            else
+            {
+                return FindParent<T>(parentObject);
+            }
         }
     }
 }

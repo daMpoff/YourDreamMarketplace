@@ -22,56 +22,54 @@
                     <materialDesign:PackIcon Kind="Home" Width="20" Height="20"/>
                 </StackPanel>
             </TabItem.Header>
-            <Grid>
-                <TabControl
+            <TabControl
                     TabStripPlacement="Top"
                     Style="{StaticResource MaterialDesignFilledUniformTabControl}"
                     materialDesign:ColorZoneAssist.Background="Gray"
                     materialDesign:ColorZoneAssist.Foreground="White"
                     HorizontalContentAlignment="Left"
                     Margin="10,0">
-                    <TabItem>
-                        <TabItem.Header>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock
                                     Height="20"
                                     FontSize="14"
                                     Foreground="White"
                                     Text="ГЛАВНАЯ СТРАНИЦА">
-                                </TextBlock>
-                                <Button
+                            </TextBlock>
+                            <Button
                                     Click="Button_Click"
                                     Style="{DynamicResource CloseTabButton}"
                                     Height="20"
                                     Width="20"
                                     Padding="0">
-                                    <materialDesign:PackIcon Padding="0" Kind="Close" Height="20" Width="20" HorizontalAlignment="Center"></materialDesign:PackIcon>
-                                </Button>
-                            </StackPanel>
-                        </TabItem.Header>
-                    </TabItem>
-                    <TabItem>
-                        <TabItem.Header>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock
+                                <materialDesign:PackIcon Padding="0" Kind="Close" Height="20" Width="20" HorizontalAlignment="Center"></materialDesign:PackIcon>
+                            </Button>
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock
                                     Height="20"
                                     FontSize="14"
                                     Foreground="White"
-                                    Text="Вторая вкладка">        
-                                </TextBlock>
-                                <Button
+                                    Text="Вторая вкладка">
+                            </TextBlock>
+                            <Button
                                     Click="Button_Click"
                                     Style="{DynamicResource CloseTabButton}"
                                     Height="20"
                                     Width="20"
                                     Padding="0">
-                                    <materialDesign:PackIcon Padding="0" Kind="Close" Height="20" Width="20" HorizontalAlignment="Center"></materialDesign:PackIcon>
-                                </Button>
-                            </StackPanel>
-                        </TabItem.Header>
-                    </TabItem>
-                </TabControl>
-            </Grid>
+                                <materialDesign:PackIcon Padding="0" Kind="Close" Height="20" Width="20" HorizontalAlignment="Center"></materialDesign:PackIcon>
+                            </Button>
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+            </TabControl>
         </TabItem>
         <TabItem
             x:Name="cartTab">
