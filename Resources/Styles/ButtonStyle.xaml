@@ -67,7 +67,7 @@
             <Setter Property="wpf:ElevationAssist.Elevation" Value="Dp2"/>
             <Setter Property="wpf:RippleAssist.Feedback" Value="White"/>
         </Style>
-    <Style x:Key="CloseTabButton" BasedOn="{StaticResource MaterialDesignRaisedButton}" TargetType="{x:Type Button}">
+    <Style x:Key="WhiteButtonWithoutBorder" BasedOn="{StaticResource MaterialDesignRaisedButton}" TargetType="{x:Type Button}">
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>

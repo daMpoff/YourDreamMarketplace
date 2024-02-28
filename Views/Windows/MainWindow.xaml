@@ -43,7 +43,7 @@
                                 Text="ГЛАВНАЯ СТРАНИЦА"></TextBlock>
                             <Button
                                 Click="Button_Click"
-                                Style="{DynamicResource CloseTabButton}"
+                                Style="{DynamicResource WhiteButtonWithoutBorder}"
                                 Height="20"
                                 Width="20"
                                 Padding="0">
