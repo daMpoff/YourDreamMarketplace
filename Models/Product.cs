@@ -7,9 +7,9 @@
         public short Stars { get; set; }
         public double Price { get; set; }
         public string ImgPath { get; set; }
-        public Product(int iD, string name, short stars, double price, string imgPath)
+        public Product(int id, string name, short stars, double price, string imgPath)
         {
-            ID = iD;
+            ID = id;
             Name = name;
             Stars = stars;
             Price = price;

@@ -10,9 +10,6 @@
     Title="YourDreamMarketplace" 
     Height="800" 
     Width="1000">
-    <Window.DataContext>
-        <local:MainTabViewModel></local:MainTabViewModel>
-    </Window.DataContext>
     <TabControl
             TabStripPlacement="Left"
             Style="{StaticResource MaterialDesignFilledTabControl}"
@@ -60,6 +57,9 @@
                                     <WrapPanel/>
                                 </ItemsPanelTemplate>
                             </ListBox.ItemsPanel>
+                            <ListBox.DataContext>
+                                <local:MainTabViewModel></local:MainTabViewModel>
+                            </ListBox.DataContext>
                         </ListBox>
                     </Grid>
                 </TabItem>
