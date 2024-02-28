@@ -14,7 +14,7 @@ namespace YourDreamMarketplace
         private void LoadData()
         {
             Products.Add(new Product(10, "Чайник", 5, 1200, @"/Resources/Images/kettle.png"));
-            Products.Add(new Product(10, "Чайник", 5, 1200, @"/Resources/Images/kettle.png"));
+            Products.Add(new Product(10, "LG", 5, 12000, @"/Resources/Images/televisor.png"));
             Products.Add(new Product(10, "Колонка", 5, 1200, @"/Resources/Images/speaker.png"));
             Products.Add(new Product(10, "Чайник", 5, 1200, @"/Resources/Images/kettle.png"));
             Products.Add(new Product(10, "Чайник", 5, 1200, @"/Resources/Images/kettle.png"));
