@@ -3,7 +3,9 @@
                     xmlns:converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
                     xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
                     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
-    <Style x:Key="MaterialDesignRaisedButton" TargetType="{x:Type ButtonBase}">
+    <Style 
+        x:Key="MaterialDesignRaisedButton"
+        TargetType="{x:Type ButtonBase}">
         <Setter Property="Background" Value="Gray"/>
         <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="BorderThickness" Value="1"/>

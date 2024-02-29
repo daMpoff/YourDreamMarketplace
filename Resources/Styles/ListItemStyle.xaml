@@ -47,7 +47,7 @@
                         Grid.Row="0" 
                         FontSize="14"
                         Foreground="Black"
-                        Text="{Binding StringFormat=Цена: {0} р.,Path=Price}">
+                        Text="{Binding StringFormat=Цена: {0}р.,Path=Price}">
                     </TextBlock>
                 </StackPanel>
                 <StackPanel 
@@ -60,7 +60,7 @@
                         IsPreviewValueEnabled="True"
                         Max="5"
                         Orientation="Horizontal"
-                        Value="4.45">
+                        Value="{Binding Path=Stars}">
                         <materialDesign:RatingBar.ValueItemTemplate>
                             <DataTemplate
                                 DataType="system:Int32">
@@ -79,7 +79,7 @@
                         FontSize="14"
                         FontWeight="Bold"
                         Foreground="Black"
-                        Text="17 345 оценок">
+                        Text="{Binding StringFormat=Отзывы: {0},Path=NumberOfReviews}">
                     </TextBlock>
                 </StackPanel>
                 <Button
