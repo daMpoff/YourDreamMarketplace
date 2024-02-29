@@ -86,11 +86,14 @@
         </TabItem>
         <TabItem
             x:Name="cartTab">
+            <TabItem.DataContext>
+                <local:UserCartViewModel></local:UserCartViewModel>
+            </TabItem.DataContext>
             <TabItem.Header>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Padding="2" Height="20" Text="Корзина"></TextBlock>
                     <materialDesign:Badged
-                         Badge="0"
+                         Badge="{Binding CountOfProducts}"
                          BadgeBackground="Red"
                          BadgeForeground="White">
                         <materialDesign:PackIcon Kind="Cart" Height="20" Width="20" />
