@@ -3,19 +3,19 @@
     public class Review
     {
         private byte stars;
-        private int idReview, idUser;
+        private int reviewId, idUser;
         private DateTime dateOfReview;
-        public int IdReview
+        public int ReviewId
         {
             get
             {
-                return idReview;
+                return reviewId;
             }
             set
             {
                 if (value > 0)
                 {
-                    idReview = value;
+                    reviewId = value;
                 }
                 else
                 {

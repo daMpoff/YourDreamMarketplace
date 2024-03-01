@@ -1,23 +1,29 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace YourDreamMarketplace
 {
     public class MainTabViewModel : INotifyPropertyChanged
     {
-        public List<Product> Products { get; set; }
+        private MySqlContext db;
+        public int PageCount { get; set; }
+        public ObservableCollection<Product> Products { get; set; }
 
         public MainTabViewModel()
         {
-            Products = new List<Product>();
+            Products = new ObservableCollection<Product>();
             LoadData();
         }
         private void LoadData()
         {
-            Products.Add(new Product(10, "Чайник", 5, 5, 1200, @"/Resources/Images/kettle.png"));
-            Products.Add(new Product(10, "LG", 3.1, 10, 12000, @"/Resources/Images/televisor.png"));
-            Products.Add(new Product(10, "Колонка", 4.7, 10, 699, @"/Resources/Images/speaker.png"));
-            Products.Add(new Product(10, "Чайник", 3.9, 200, 1200, @"/Resources/Images/kettle.png"));
-            Products.Add(new Product(10, "Чайник", 2.1, 2, 1200, @"/Resources/Images/kettle.png"));
+            using (db = new MySqlContext())
+            {
+                db.Database.EnsureCreated();
+                //Console.WriteLine(ConfigurationManager.AppSettings
+                db.Products.Skip(20 * PageCount).Take(20).Load();//Пропустили 0, так как 0 страница, взяли 20
+                Products = db.Products.Local.ToObservableCollection();
+            }
         }
         public event PropertyChangedEventHandler? PropertyChanged;
     }

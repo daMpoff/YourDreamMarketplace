@@ -5,7 +5,7 @@
         private int countOfReviews;
         private double stars;
         public int ProductId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public double Stars
         {
             get
@@ -41,9 +41,8 @@
             }
         }
         public List<Review> Reviews { get; set; }
-        public Product(int id, string name, double stars, int countReviews, decimal price, string imgPath)
+        public Product(string name, double stars, int countOfReviews, decimal price, string imgPath)
         {
-            ProductId = id;
             Name = name;
             Stars = stars;
             CountOfReviews = countOfReviews;

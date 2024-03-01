@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Resources\Fonts\VKSansDisplay-Regular.ttf" />
+    <None Remove="Resources\Images\graphicCard.png" />
     <None Remove="Resources\Images\kettle.png" />
     <None Remove="Resources\Images\speaker.png" />
     <None Remove="Resources\Images\televisor.png" />
@@ -26,16 +27,28 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\graphicCard.png" />
     <Resource Include="Resources\Images\kettle.png" />
     <Resource Include="Resources\Images\speaker.png" />
     <Resource Include="Resources\Images\televisor.png" />
     <Resource Include="Resources\Images\washingMashine.png" />
     <Resource Include="Resources\Styles\ButtonStyle.xaml" />
     <Resource Include="Resources\Fonts\VKSansDisplay-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
